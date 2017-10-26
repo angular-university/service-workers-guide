@@ -1,6 +1,6 @@
 
 
-const VERSION = 'v1';
+const VERSION = 'v11';
 
 
 self.addEventListener('install', event => event.waitUntil(installServiceWorker()));
@@ -11,8 +11,6 @@ async function installServiceWorker() {
     log("Service Worker installation started ");
 
     const cache = await caches.open(getCacheName());
-
-    self.skipWaiting();
 
     return cache.addAll([
         '/',
@@ -41,7 +39,6 @@ async function activateSW() {
         }
     });
 
-    return clients.claim();
 }
 
 

@@ -1,13 +1,16 @@
 
-
 if ('serviceWorker' in navigator) {
 
-    navigator.serviceWorker.register('/sw.js', {
-        scope: '/'
-    })
-    .then(registration => {
+    window.addEventListener('load', function () {
 
-        console.log("Service Worker registration completed ...");
+        navigator.serviceWorker.register('/sw.js', {
+            scope: '/'
+        })
+        .then(registration => {
+
+            console.log("Service Worker registration completed ...");
+
+        });
 
     });
 
