@@ -1,18 +1,21 @@
-
 if ('serviceWorker' in navigator) {
 
     window.addEventListener('load', function () {
 
-        navigator.serviceWorker.register('/sw.js', {
+
+        navigator.serviceWorker.register('/sw-hello-world.js', {
             scope: '/'
         })
-        .then(registration => {
+            .then(registration => {
 
-            console.log("Service Worker registration completed ...");
+                console.log("Service Worker registration completed ...");
 
-        });
+            });
 
     });
+
+
+
 
 }
 

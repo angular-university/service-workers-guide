@@ -1,34 +1,10 @@
 
 
 
-const VERSION = 'v2';
-
-// handling service worker installation
-self.addEventListener('install', event => {
-    log("Service Worker installation INSTALLING ");
-});
-
-// handling service worker installation
-self.addEventListener('activate', event => {
-    log("Service Worker installation ACTIVATED ");
-});
-
-// handling service worker installation
-self.addEventListener('fetch', event => {
-    log("HTTP call intercepted - " + event.request.url);
-    return event.respondWith(fetch(event.request.url));
-});
-
-
-// each logging line will be prepended with the service worker version
-function log(message) {
-    console.log(VERSION, message);
-}
+const VERSION = 'v1';
 
 
 
-
-/*
 
 self.addEventListener('install', event => event.waitUntil(installServiceWorker()));
 
@@ -94,7 +70,7 @@ async function cacheThenNetwork(event) {
 }
 
 
-*/
+
 
 
 
