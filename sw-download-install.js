@@ -1,9 +1,7 @@
 
 
 
-const VERSION = 'v1';
-
-
+const VERSION = 'v3';
 
 
 self.addEventListener('install', event => event.waitUntil(installServiceWorker()));
@@ -24,7 +22,6 @@ async function installServiceWorker() {
         'http://getbootstrap.com/dist/js/bootstrap.min.js',
         'http://getbootstrap.com/assets/js/vendor/holder.min.js'
     ]);
-
 }
 
 self.addEventListener('activate', () => activateSW());

@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
 
 
-        navigator.serviceWorker.register('/sw-hello-world.js', {
+        navigator.serviceWorker.register('/sw-download-install.js', {
             scope: '/'
         })
             .then(registration => {
